@@ -42,10 +42,12 @@ public class FileTestUser {
 		//e main é nescessario colocar um printWriter.println("ghujhujtyutyu");
 	
 		
-		printWriter.println(user.getId());
-		printWriter.println(user.getNome());
-		printWriter.println(user.getObservacao());
-		printWriter.println(user.getPlaca());
+		printWriter.println(user.getId().toUpperCase());
+		printWriter.println(user.getNome().toUpperCase());
+		printWriter.println(user.getTelefone().toUpperCase());
+		printWriter.println(user.getObservacao().toUpperCase());
+		printWriter.println(user.getPlaca().toUpperCase());
+		
 		//o método flush libera a escrita no arquivo
 		printWriter.flush();
 

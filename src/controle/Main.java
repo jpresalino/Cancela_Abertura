@@ -1,28 +1,41 @@
 package controle;
 
 import java.io.IOException;
-
+import java.util.Scanner;
 import interfaces.FileTestUser;
 import modelos.User;
 
 public class Main {
-
-	public static void main(String[] args) throws IOException {
-        //criando um objeto User
-        User user = new User();
-        user.setId("Usuario:");
-        //Colocar nome do usuario
-        user.setNome("Nome: " + "Julia Cristina Presalino");
-        // Se é carro ou moto
-        user.setObservacao("Veiculo: " + "Carro");
-       //colocar a placa do carro ou da moto 
-        user.setPlaca("Placa: " + "PQP1234");
-
-        //Chamando o método escrever e passando user como parâmetro
-        FileTestUser.escrever(user);
-
-    
-
+	public static void main(String[] args) {
+	System.out.println("digite 'V' para validar");
+	System.out.println("digite 'C' para cadastrar");
+	
+    	Scanner entrada = new Scanner(System.in);
+    	
+    	char opcao = entrada.next().toUpperCase().toCharArray()[0];
+    	
+    	switch (opcao) {
+    	
+    	case 'V':
+    		Scanner entrada1 = new Scanner(System.in);
+    		String entrada_usuario;
+    		System.out.println("Olá, Digite o seu nome ou sua placa ");
+          entrada_usuario = entrada1.nextLine().toUpperCase();
+          System.out.println (entrada_usuario);
+    		break;
+    	case 'C':
+    	//colocar cadastro
+    	break;
+    	default:
+    	System.out.println("Opção Invalida. Digite novamente");	
+    	
+    	
+    	
+    	
+    	
+    	
+		
 	}
 
+	}
 }

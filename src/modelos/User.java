@@ -6,14 +6,16 @@ public class User {
     private String nome;
     private String observacao;
     private String placa;
+    private String telefone;
     public User() {
     }
 
-    public User(String id, String nome, String observacao, String placa) {
+    public User(String id, String nome, String observacao, String placa, String telefone) {
         this.id = id;
         this.nome = nome;
         this.observacao = observacao;
         this.placa = placa;
+        this.telefone = telefone;
     }
 	//Gere os métodos getters e setters
 	//Subscreva o método toString()   
@@ -65,6 +67,15 @@ public class User {
 		
 	}
 
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	
 
 		
 }
