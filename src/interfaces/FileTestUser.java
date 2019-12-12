@@ -17,7 +17,9 @@ public class FileTestUser {
     
 
     public static void escrever(User user) throws IOException {
-        File dir = new File("C:\\Users\\Public\\tmp");
+       
+    	
+    	File dir = new File("C:\\Users\\Public\\tmp");
         File arq = new File(dir, "texte.txt");
 //passando para o construtor qual arquivo vamos manipular.sem apagar o que já existe.
         //Devemos passar no construtor do FileWriter qual arquivo
@@ -65,13 +67,13 @@ public class FileTestUser {
 		return null;
 	}
 
-	private static void ler() {
-    	File dir = new File("C:\\Users\\Public\\tmp texte");
-        File ard = new File(dir, "C:\\Users\\Public\\tmp texte");
+	public static void ler() {
+    	File dir = new File("C:\\Users\\Public\\tmp");
+        File arq = new File(dir, "texte.txt");
 
         try {
             //Indicamos o arquivo que será lido
-            FileReader fileReader = new FileReader(dir);
+            FileReader fileReader = new FileReader(arq);
 
             //Criamos o objeto bufferReader que nos
             // oferece o método de leitura readLine()
